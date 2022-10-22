@@ -4,6 +4,11 @@
 
 // Desktops & Laptops
 @include mediaLg {
+  body {
+    &#bg-img {
+      background: $home-image;
+    }
+  }
 }
 
 // Tablets & Small Laptops
