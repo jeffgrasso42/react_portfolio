@@ -1,4 +1,4 @@
-$primary-color: #2b2d36;
+$primary-color: #1a1b1e;
 $secondary-color: #82aaff;
 $show-home-image: true;
 $home-image: url(../img/kandinsky_background_right.jpg);
@@ -16,7 +16,7 @@ $background-opacity: 0.3;
       background-size: cover;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
