@@ -89,6 +89,10 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+  body#bg-img {
+    background: url(../img/kandinsky_background_right.jpg); } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -131,7 +135,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/kandinsky_background_right.jpg);
+    background: url(../img/kandinsky_background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img::after {
@@ -173,7 +177,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 3.5rem); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -185,3 +189,38 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main#about {
+    padding: 2rem 4rem; }
+    main#about .lg-heading {
+      line-height: 1.2; }
+
+.about-info {
+  display: grid;
+  row-gap: 30px;
+  column-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid #82aaff; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .about-info .job-1 {
+    grid-area: job1; }
+  .about-info .job-2 {
+    grid-area: job2; }
+  .about-info .job-3 {
+    grid-area: job3; }
+  .about-info .job {
+    background: rgba(38, 39, 44, 0.6);
+    padding: 0.5rem;
+    border-bottom: #82aaff 5px solid; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #020203;
+  height: 3.5rem; }
