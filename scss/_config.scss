@@ -1,6 +1,6 @@
 $primary-color: #1a1b1e;
 $secondary-color: #82aaff;
-$show-home-image: true;
+// $show-home-image: true;
 $home-image-mobile: url(../img/kandinsky_background.jpg);
 $home-image: url(../img/kandinsky_background_right.jpg);
 $background-opacity: 0.3;
@@ -10,42 +10,40 @@ $background-opacity: 0.3;
 }
 
 @mixin background {
-  @if $show-home-image {
-    &#bg-img {
-      background: $home-image-mobile;
-      background-attachment: fixed;
-      background-size: cover;
+  &#bg-img {
+    background: $home-image-mobile;
+    background-attachment: fixed;
+    background-size: cover;
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba($primary-color, $background-opacity);
     }
   }
+  // @if $show-home-image {
+  // }
 }
 @mixin background-Lg {
-  @if $show-home {
-    &#bg-img {
-      background: $home-image-mobile;
-      background-attachment: fixed;
-      background-size: cover;
+  &#bg-img {
+    background: $home-image;
+    background-attachment: fixed;
+    background-size: cover;
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba($primary-color, $background-opacity);
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba($primary-color, $background-opacity);
     }
   }
 }

@@ -1,13 +1,10 @@
 @import 'config';
-@import 'menu';
-@import 'mobile';
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  @include background;
   background: $primary-color;
   color: white;
   height: 100%;
@@ -57,9 +54,10 @@ main {
   // nested so that it will only affect icons class inside of main tag
   .icons {
     margin-top: 1rem;
+    padding: 0.2rem 1rem;
 
     a {
-      padding: 0.4 rem;
+      padding-right: 0.4rem;
 
       &:hover {
         color: $secondary-color;
@@ -131,3 +129,6 @@ main {
   background: darken($primary-color, 10);
   height: 3.5rem;
 }
+
+@import 'menu';
+@import 'mobile';
