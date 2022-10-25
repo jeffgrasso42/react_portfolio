@@ -138,7 +138,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100vh - 3.5rem); }
+  min-height: calc(100vh - 1.6rem); }
   main .icons {
     margin-top: 1rem;
     padding: 0.2rem 1rem; }
@@ -193,11 +193,17 @@ main {
       border-color: #82aaff;
       transition: all 0.5s ease-out; }
 
+.boxes {
+  display: flex;
+  flex-flow: column; }
+  .boxes div {
+    display: inline-block;
+    padding: 0.3rem 0.5rem; }
+
 #main-footer {
   text-align: center;
-  padding: 1rem;
   background: #020203;
-  height: 3.5rem; }
+  height: 1.6rem; }
 
 @media screen and (min-width: 1181px) {
   body#bg-img {
@@ -226,7 +232,7 @@ main {
       top: 0;
       right: 0;
       width: 100%;
-      min-height: calc(100vh - 3.5rem);
+      min-height: calc(100vh - 2rem);
       z-index: -1;
       background: rgba(26, 27, 30, 0.3); }
   main {
@@ -271,10 +277,14 @@ main {
       top: 0;
       right: 0;
       width: 100%;
-      min-height: calc(100vh - 3.5rem);
+      min-height: calc(100vh - 2rem);
       z-index: -1;
       background: rgba(26, 27, 30, 0.3); }
   main#home h1 {
     margin-top: 10vh; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes {
+    align-items: center; }
+  h1.lg-heading {
+    font-size: 5rem; } }
