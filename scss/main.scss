@@ -1,4 +1,6 @@
 @import 'config';
+@import 'menu';
+@import 'button';
 
 * {
   box-sizing: border-box;
@@ -123,6 +125,24 @@ main {
   }
 }
 
+// Work/Projects
+.projects {
+  display: grid;
+  row-gap: 0.7rem;
+  column-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -130,5 +150,4 @@ main {
   height: 3.5rem;
 }
 
-@import 'menu';
 @import 'mobile';
