@@ -2,21 +2,31 @@
   "name": "modern_portfolio",
   "version": "1.0.0",
   "description": "Responsive portfolio website",
-  "main": "index.js", 
+  "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jeffgrasso42/traversy-portfolio.git"
+    "url": "git+https://github.com/jeffgrasso42/jeff_grasso_portfolio.git"
   },
   "author": "Jeff Grasso",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jeffgrasso42/traversy-portfolio/issues"
+    "url": "https://github.com/jeffgrasso42/jeff_grasso_portfolio/issues"
   },
-  "homepage": "https://github.com/jeffgrasso42/traversy-portfolio#readme",
+  "homepage": "https://github.com/jeffgrasso42/jeff_grasso_portfolio#readme",
   "dependencies": {
-    "node-sass": "^7.0.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "sass": "^1.56.1",
+    "vite": "^3.2.3"
   }
 }
