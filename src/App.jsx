@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
+import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
 
@@ -23,8 +24,14 @@ function App() {
 
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange} navDisplay={navDisplay} setNavDisplay={setNavDisplay} />
+      <Header 
+        currentPage={currentPage} 
+        handlePageChange={handlePageChange} 
+        navDisplay={navDisplay} 
+        setNavDisplay={setNavDisplay} />
+
       {renderPage()}
+
       <Footer />
     </div>
   )
