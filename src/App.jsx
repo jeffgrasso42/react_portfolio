@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
+import About from './pages/About'
+import Footer from './components/Footer'
 
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
+  const [navDisplay,setNavDisplay] = useState(false)
 
   const renderPage = () => {
     if (currentPage === 'Home') return <Home />;
@@ -13,13 +16,16 @@ function App() {
     else return <Contact />;
   }
 
-  const handlePageChange = (page) => setCurrentPage(page);
-  console.log(currentPage)
+  const handlePageChange = (page) => {
+    setNavDisplay(false);
+    setCurrentPage(page);
+  };
 
   return (
     <div>
-      <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
+      <Header currentPage={currentPage} handlePageChange={handlePageChange} navDisplay={navDisplay} setNavDisplay={setNavDisplay} />
       {renderPage()}
+      <Footer />
     </div>
   )
 }
