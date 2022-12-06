@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
+import Home from './pages/Home'
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   return (
     <div>
       <Header currentPage={currentPage} handlePageChange={handlePageChange}/>
-      {/* {renderPage} */}
+      {renderPage()}
     </div>
   )
 }
