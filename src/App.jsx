@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
+import Work from './pages/Work'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 
