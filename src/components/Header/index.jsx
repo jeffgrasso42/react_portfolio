@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Nav from '../Nav'
 
-const Header = ({ currentPage, handlePageChange }) => {
-  const [navDisplay,setNavDisplay] = useState(false)
+const Header = ({ currentPage, handlePageChange, navDisplay,setNavDisplay }) => {
   
   const toggleNavDisplay = () => {
-    navDisplay ?setNavDisplay(false) :setNavDisplay(true);
+    navDisplay ? setNavDisplay(false) : setNavDisplay(true);
   }
   
   return (
