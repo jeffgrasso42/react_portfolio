@@ -1,8 +1,8 @@
 $primary-color: #1a1b1e;
 $secondary-color: #82aaff;
 // $show-home-image: true;
-$home-image-mobile: url(../img/kandinsky_background.jpg);
-$home-image: url(../img/kandinsky_background_right.jpg);
+$home-image-mobile: url(./src/assets/img/kandinsky_background.jpg);
+$home-image: url(./src/assets/img/kandinsky_background_right.jpg);
 $background-opacity: 0.3;
 
 @mixin easeOut {
