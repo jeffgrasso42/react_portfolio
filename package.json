@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/jeffgrasso42/jeff_grasso_portfolio/issues"
   },
-  "homepage": "https://github.com/jeffgrasso42/jeff_grasso_portfolio#readme",
+  "homepage": "https://jeffgrasso42.github.io/react_portfolio/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

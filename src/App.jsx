@@ -5,9 +5,16 @@ import About from './pages/About'
 import Work from './pages/Work'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import backgroundImage from './assets/img/kandinsky_background_right.jpg'
 
 
 function App() {
+  const backgroundStyle = {
+    background: `url(${backgroundImage})`,
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+  }
+
   const [currentPage, setCurrentPage] = useState('Home');
   const [navDisplay,setNavDisplay] = useState(false)
 
@@ -24,7 +31,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={backgroundStyle}>
       <Header 
         currentPage={currentPage} 
         handlePageChange={handlePageChange} 
