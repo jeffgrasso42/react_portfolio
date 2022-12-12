@@ -17,12 +17,13 @@ function App() {
     backgroundSize: 'cover',
   }
 
-  // const smallBackgroundStyle = {
-  //   background: `url(${smallBackgroundImage})`,
-  //   backgroundAttachment: 'fixed',
-  //   backgroundSize: 'cover',
-  // }
+  const smallBackgroundStyle = {
+    background: `url(${smallBackgroundImage})`,
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
+  }
 
+  const [backgroundSize, setBackgroundSize] = useState('small')
   const [currentPage, setCurrentPage] = useState('Home');
   const [navDisplay,setNavDisplay] = useState(false)
 
@@ -40,18 +41,14 @@ function App() {
 
   return (
     <>
-      {/* <Media queries={{
+      <Media queries={{
         small: "(max-width: 768px)"
       }}>
         {matches => (
-          matches.small ? (
-            <div style={smallBackgroundStyle}>Small</div>
-          ) : (
-            <div style={backgroundStyle}>Large</div>
-          )
+          !matches.small ? setBackgroundSize('large') : setBackgroundSize('small')
         )}
-      </Media> */}
-      <div style={backgroundStyle}>
+      </Media>
+      <div style={backgroundSize === 'small' ? smallBackgroundStyle : backgroundStyle}>
         <Header 
           currentPage={currentPage} 
           handlePageChange={handlePageChange} 

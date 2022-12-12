@@ -4,7 +4,8 @@ import App from './App'
 import './scss/main.scss'
 
 console.log(import.meta.env.VITE_DEBUG)
-if (!import.meta.env.VITE_DEBUG) {
+// booleans from environmental variables are cast to strings
+if (import.meta.env.VITE_DEBUG !== 'true') {
   console.log = console.warn = console.error = () => {};
 }
 
