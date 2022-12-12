@@ -1,11 +1,40 @@
 import React from 'react'
+import Media from 'react-media'
+import portraitSmall from '../../assets/img/portrait_sm.jpg'
+import portrait from '../../assets/img/portrait.jpg'
 
 const Nav = ({ navDisplay, currentPage, handlePageChange, toggleNavDisplay}) => {
+
+  const smallPortraitStyles = {
+    width: '150px',
+    height: '150px',
+    background: `url(${portraitSmall})`,
+    borderRadius: '50%',
+    border: 'solid 3px #82aaff'
+  }
+
+  const portraitStyles = {
+    width: '250px',
+    height: '250px',
+    background: `url(${portrait})`,
+    borderRadius: '50%',
+    border: 'solid 3px #82aaff'
+  }
 
   return (
     <nav className={!navDisplay ? 'menu' : 'menu show'}>
         <div className={!navDisplay ? 'menu-branding' : 'menu-branding show'}>
-          <div className="portrait"></div>
+          <Media queries={{
+            small: "(max-width: 768px)"
+          }}>
+            {matches => (
+              matches.small ? (
+                <div id='small' style={smallPortraitStyles}></div>
+              ) : (
+                <div id='large' style={portraitStyles}></div>
+              )
+            )}
+          </Media>
         </div>
         <ul className={!navDisplay ? 'menu-nav' : 'menu-nav show'}>
           <li className={!navDisplay ? 'nav-item' : 'nav-item show'}>

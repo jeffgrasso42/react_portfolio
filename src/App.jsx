@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
+import Media from 'react-media'
 import Header from './components/Header'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -6,6 +7,7 @@ import Work from './pages/Work'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
 import backgroundImage from './assets/img/kandinsky_background_right.jpg'
+import smallBackgroundImage from './assets/img/kandinsky_background.jpg'
 
 
 function App() {
@@ -14,6 +16,12 @@ function App() {
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
   }
+
+  // const smallBackgroundStyle = {
+  //   background: `url(${smallBackgroundImage})`,
+  //   backgroundAttachment: 'fixed',
+  //   backgroundSize: 'cover',
+  // }
 
   const [currentPage, setCurrentPage] = useState('Home');
   const [navDisplay,setNavDisplay] = useState(false)
@@ -31,17 +39,30 @@ function App() {
   };
 
   return (
-    <div style={backgroundStyle}>
-      <Header 
-        currentPage={currentPage} 
-        handlePageChange={handlePageChange} 
-        navDisplay={navDisplay} 
-        setNavDisplay={setNavDisplay} />
+    <>
+      {/* <Media queries={{
+        small: "(max-width: 768px)"
+      }}>
+        {matches => (
+          matches.small ? (
+            <div style={smallBackgroundStyle}>Small</div>
+          ) : (
+            <div style={backgroundStyle}>Large</div>
+          )
+        )}
+      </Media> */}
+      <div style={backgroundStyle}>
+        <Header 
+          currentPage={currentPage} 
+          handlePageChange={handlePageChange} 
+          navDisplay={navDisplay} 
+          setNavDisplay={setNavDisplay} />
 
-      {renderPage()}
+        {renderPage()}
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   )
 }
 
