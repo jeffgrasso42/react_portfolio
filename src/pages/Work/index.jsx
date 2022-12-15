@@ -2,7 +2,9 @@ import React from 'react'
 import ProjectCard from '../../components/ProjectCard'
 import iEatzImg from '../../assets/img/projects/iEatz.png'
 import safeMedImg from '../../assets/img/projects/safeMed.png'
-import teamProfileGeneratorImg from '../../assets/img/projects/team-profile-generator.png'
+import TravelXImg from '../../assets/img/projects/TravelX.png'
+// import teamProfileGeneratorImg from '../../assets/img/projects/team-profile-generator.png'
+
 
 const Work = () => {
   const projects = [
@@ -14,19 +16,26 @@ const Work = () => {
       deployedUrl: null
     },
     {
+      name: 'TravelX',
+      image: TravelXImg,
+      github: 'git@github.com:inidhi99/travelX.git',
+      deployed: true,
+      deployedUrl: 'https://nameless-falls-66947.herokuapp.com/'
+    },
+    {
       name: 'safeMed',
       image: safeMedImg,
       github: 'https://github.com/rsenecal/Project2-safeMed.git',
       deployed: true,
       deployedUrl: 'https://project2-safe-med.herokuapp.com/'
     },
-    {
-      name: 'Team Profile Generator',
-      image: teamProfileGeneratorImg,
-      github: 'https://github.com/jeffgrasso42/team-profile-generator.git',
-      deployed: false,
-      deployedUrl: null
-    }
+    // {
+    //   name: 'Team Profile Generator',
+    //   image: teamProfileGeneratorImg,
+    //   github: 'https://github.com/jeffgrasso42/team-profile-generator.git',
+    //   deployed: false,
+    //   deployedUrl: null
+    // }
   ]
 
 
