@@ -12,13 +12,13 @@ import smallBackgroundImage from './assets/img/kandinsky_background.jpg'
 
 function App() {
   const backgroundStyle = {
-    background: `url(${backgroundImage})`,
+    backgroundImage: `url(${backgroundImage})`,
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
   }
 
   const smallBackgroundStyle = {
-    background: `url(${smallBackgroundImage})`,
+    backgroundImage: `url(${smallBackgroundImage})`,
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
   }
@@ -48,7 +48,7 @@ function App() {
           !matches.small ? setBackgroundSize('large') : setBackgroundSize('small')
         )}
       </Media>
-      <div style={backgroundSize === 'small' ? smallBackgroundStyle : backgroundStyle}>
+      <div id="my-bg" style={backgroundSize === 'small' ? smallBackgroundStyle : backgroundStyle}>
         <Header 
           currentPage={currentPage} 
           handlePageChange={handlePageChange} 
