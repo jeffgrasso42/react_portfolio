@@ -8,7 +8,7 @@ const Nav = ({ navDisplay, currentPage, handlePageChange, toggleNavDisplay}) => 
   const smallPortraitStyles = {
     width: '150px',
     height: '150px',
-    background: `url(${portraitSmall})`,
+    backgroundImage: `url(${portraitSmall})`,
     borderRadius: '50%',
     border: 'solid 3px #82aaff'
   }
@@ -16,7 +16,7 @@ const Nav = ({ navDisplay, currentPage, handlePageChange, toggleNavDisplay}) => 
   const portraitStyles = {
     width: '250px',
     height: '250px',
-    background: `url(${portrait})`,
+    backgroundImage: `url(${portrait})`,
     borderRadius: '50%',
     border: 'solid 3px #82aaff'
   }
